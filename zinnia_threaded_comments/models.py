@@ -28,3 +28,6 @@ class ThreadedComment(MPTTModel, Comment):
         Comment MPTT's meta informations.
         """
         order_insertion_by = ['submit_date']
+
+    class Meta:
+        ordering = ('tree_id', 'lft')
